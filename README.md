@@ -1,0 +1,4 @@
+ansible-consul
+==============
+
+Consul playbook
