@@ -1,0 +1,15 @@
+{
+  "datacenter": "{{ consul_conf_datacenter }}",
+{% if consul_conf_bootstrap %}
+  "bootstrap": true,
+{% endif %}
+  "bind_addr": "{{ consul_conf_bind_addr }}",
+  "client_addr": "{{ consul_conf_client_addr }}",
+  "data_dir": "{{ consul_conf_data_dir }}",
+  "log_level": "{{ consul_conf_log_level }}",
+  "node_name": "{{ consul_conf_node_name }}",
+  "server": {{ (consul_install_mode == 'server') | to_json }},
+  "leave_on_terminate": {{ consul_conf_leave_on_terminate | to_json }},
+  "start_join": {{ groups['consuls'] | to_json }},
+  "disable_update_check": {{ consul_conf_disable_update_check | to_json }}
+}
