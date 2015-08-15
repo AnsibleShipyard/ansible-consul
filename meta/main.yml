@@ -2,7 +2,6 @@
 galaxy_info:
   author: Benoit Carrière
   description: Ansible Consul Playbook Role
-  company: http://expedia.com
   license: Apache 2
   min_ansible_version: 1.7
   #
@@ -55,15 +54,15 @@ galaxy_info:
   #  - 9.2
   - name: Ubuntu
     versions:
-      - all
-      - lucid
-      - maverick
-      - natty
-      - oneiric
-      - precise
-      - quantal
-      - raring
-      - saucy
+  #   - all
+  #   - lucid
+  #   - maverick
+  #   - natty
+  #   - oneiric
+  #   - precise
+  #   - quantal
+  #   - raring
+  #   - saucy
       - trusty
   #- name: SLES
   #  versions:
@@ -78,13 +77,13 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
-  - name: Debian
-    versions:
-      - all
-      - etch
-      - lenny
-      - squeeze
-      - wheezy
+  #- name: Debian
+  #  versions:
+  #    - all
+  #    - etch
+  #    - lenny
+  #    - squeeze
+  #    - wheezy
 
   # Below are all categories currently available. Just as with
   # the platforms above, uncomment those that apply to your role.
