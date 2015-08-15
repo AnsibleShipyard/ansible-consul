@@ -1,6 +1,6 @@
 
 consul_version: '0.5.2'
-consul_package: "{{ consul_packages[consul_version][ansible_system | lower][ansible_architecture] }}"
+consul_package: "{{ consul_packages[consul_version][ansible_system][ansible_architecture] }}"
 consul_package_name: "{{ consul_package.name }}"
 consul_package_checksum: "{{ consul_package.sha256sum }}"
 consul_package_repository: 'https://bintray.com/artifact/download/mitchellh/consul'
@@ -21,5 +21,6 @@ consul_conf_data_dir: "{{ consul_data_path }}"
 consul_conf_log_level: 'info'
 consul_conf_node_name: "{{ consul_install_mode }}-{{ ansible_hostname | regex_replace('\\.', '_') }}"
 consul_conf_leave_on_terminate: true
-consul_conf_start_join: "{{ groups['consuls'] | to_json }}"
+consul_conf_start_join:
+  - "{{ ansible_default_ipv4.address }}"
 consul_conf_disable_update_check: true

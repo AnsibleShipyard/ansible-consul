@@ -10,6 +10,6 @@
   "node_name": "{{ consul_conf_node_name }}",
   "server": {{ (consul_install_mode == 'server') | to_json }},
   "leave_on_terminate": {{ consul_conf_leave_on_terminate | to_json }},
-  "start_join": {{ groups['consuls'] | to_json }},
+  "start_join": {{ consul_conf_start_join | to_json }},
   "disable_update_check": {{ consul_conf_disable_update_check | to_json }}
 }
