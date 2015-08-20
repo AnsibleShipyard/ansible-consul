@@ -6,13 +6,21 @@ consul_package_checksum: "{{ consul_package.sha256sum }}"
 consul_package_repository: 'https://bintray.com/artifact/download/mitchellh/consul'
 consul_package_url: "{{ consul_package_repository }}/{{ consul_package_name }}"
 
+consul_webui_package: "{{ consul_webui_packages[consul_version] }}"
+consul_webui_package_name: "{{ consul_webui_package.name }}"
+consul_webui_package_checksum: "{{ consul_webui_package.sha256sum }}"
+consul_webui_package_url: "{{ consul_package_repository }}/{{ consul_webui_package_name }}"
+
 consul_group: consul
 consul_user: consul
 consul_install_path: '/usr/local/bin'
 consul_data_path: '/opt/consul'
+consul_webui_path: '/opt/consul-webui'
 consul_config_path: '/etc/consul.d'
 
 consul_install_mode: 'client'
+consul_install_webui: false
+
 consul_conf_datacenter: 'dc1'
 consul_conf_bootstrap: false
 consul_conf_bind_addr: "{{ ansible_default_ipv4.address }}"

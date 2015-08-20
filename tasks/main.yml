@@ -6,3 +6,6 @@
   when: ansible_os_family == 'RedHat'
 
 - include: consul.yml
+
+- include: webui.yml
+  when: consul_install_webui == true

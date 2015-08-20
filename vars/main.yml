@@ -14,4 +14,9 @@ consul_packages:
       x86_64:
         name: '0.5.2_linux_amd64.zip'
         sha256sum: '171cf4074bfca3b1e46112105738985783f19c47f4408377241b868affa9d445'
-   
+
+consul_webui_packages:
+  0.5.2:
+    name: 0.5.2_web_ui.zip
+    sha256sum: ad883aa52e1c0136ab1492bbcedad1210235f26d59719fb6de3ef6464f1ff3b1   
+
