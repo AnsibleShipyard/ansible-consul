@@ -17,3 +17,11 @@
         force=yes
       register: status
       failed_when: "'OK' not in status.msg"
+      
+    - name: Test for Consul Web UI
+      get_url: 
+        url="http://{{ansible_default_ipv4.address}}:8500/ui/" 
+        dest=/tmp/consul-webui
+        force=yes
+      register: webui_status
+      failed_when: "'OK' not in webui_status.msg"

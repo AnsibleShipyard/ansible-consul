@@ -3,6 +3,9 @@
 {% if consul_conf_bootstrap %}
   "bootstrap": true,
 {% endif %}
+{% if consul_install_webui %}
+  "ui_dir": "{{ consul_webui_path }}",
+{% endif %}
   "bind_addr": "{{ consul_conf_bind_addr }}",
   "client_addr": "{{ consul_conf_client_addr }}",
   "data_dir": "{{ consul_conf_data_dir }}",
