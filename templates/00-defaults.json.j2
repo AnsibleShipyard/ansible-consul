@@ -14,5 +14,7 @@
   "server": {{ (consul_install_mode == 'server') | to_json }},
   "leave_on_terminate": {{ consul_conf_leave_on_terminate | to_json }},
   "start_join": {{ consul_conf_start_join | to_json }},
+  "retry_join": {{ consul_conf_retry_join | to_json }},
+  "retry_interval": "{{ consul_conf_retry_interval }}",
   "disable_update_check": {{ consul_conf_disable_update_check | to_json }}
 }
