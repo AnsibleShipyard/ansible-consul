@@ -8,4 +8,4 @@
 - include: consul.yml
 
 - include: webui.yml
-  when: consul_install_webui | bool == true
+  when: consul_install_webui | bool == True

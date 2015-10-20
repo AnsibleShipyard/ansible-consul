@@ -19,7 +19,7 @@ consul_webui_path: '/opt/consul-webui'
 consul_config_path: '/etc/consul.d'
 
 consul_install_mode: 'client'
-consul_install_webui: false
+consul_install_webui: False
 
 consul_conf_datacenter: 'dc1'
 consul_conf_bootstrap: false
@@ -31,4 +31,7 @@ consul_conf_node_name: "{{ consul_install_mode }}-{{ ansible_hostname | regex_re
 consul_conf_leave_on_terminate: true
 consul_conf_start_join:
   - "{{ ansible_default_ipv4.address }}"
+consul_conf_retry_join:
+  - "{{ ansible_default_ipv4.address }}"
+consul_conf_retry_interval: 30s
 consul_conf_disable_update_check: true

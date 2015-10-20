@@ -1,4 +1,4 @@
-consul_playbook_version: "0.1.0"
+consul_playbook_version: "0.2.0"
 
 # Packages per version, system and architecture
 consul_packages:
