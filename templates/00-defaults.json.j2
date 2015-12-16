@@ -8,6 +8,12 @@
 {% endif %}
   "bind_addr": "{{ consul_conf_bind_addr }}",
   "client_addr": "{{ consul_conf_client_addr }}",
+  "addresses": {
+    "dns": "{{ consul_conf_addresses_dns }}",
+    "http": "{{ consul_conf_addresses_http }}",
+    "https": "{{ consul_conf_addresses_https }}",
+    "rpc": "{{ consul_conf_addresses_rpc }}"
+  },
   "data_dir": "{{ consul_conf_data_dir }}",
   "log_level": "{{ consul_conf_log_level }}",
   "node_name": "{{ consul_conf_node_name }}",
