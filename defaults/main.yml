@@ -1,9 +1,9 @@
 
-consul_version: '0.5.2'
+consul_version: '0.6.3'
 consul_package: "{{ consul_packages[consul_version][ansible_system][ansible_architecture] }}"
 consul_package_name: "{{ consul_package.name }}"
 consul_package_checksum: "{{ consul_package.sha256sum }}"
-consul_package_repository: 'https://bintray.com/artifact/download/mitchellh/consul'
+consul_package_repository: https://releases.hashicorp.com/consul
 consul_package_url: "{{ consul_package_repository }}/{{ consul_package_name }}"
 
 consul_webui_package: "{{ consul_webui_packages[consul_version] }}"

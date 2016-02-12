@@ -1,4 +1,4 @@
-consul_playbook_version: "0.3.0"
+consul_playbook_version: "0.4.0"
 
 # Packages per version, system and architecture
 consul_packages:
@@ -14,9 +14,24 @@ consul_packages:
       x86_64:
         name: '0.5.2_linux_amd64.zip'
         sha256sum: '171cf4074bfca3b1e46112105738985783f19c47f4408377241b868affa9d445'
+  0.6.3:
+    Darwin:
+      x86_64:
+        name: 'consul_0.6.3_darwin_amd64.zip'
+        sha256sum: '6dff4ffc61d66aacd627a176737b8725624718a9e68cc81460a3df9b241c7932'
+    Linux:
+      x86:
+        name: 'consul_0.6.3_linux_386.zip'
+        sha256sum: '2afb65383ab913344daaa9af827c1e8576c7cae16e93798048122929b6e4cc92'
+      x86_64:
+        name: 'consul_0.6.3_linux_amd64.zip'
+        sha256sum: 'b0532c61fec4a4f6d130c893fd8954ec007a6ad93effbe283a39224ed237e250'
 
 consul_webui_packages:
   0.5.2:
     name: 0.5.2_web_ui.zip
     sha256sum: ad883aa52e1c0136ab1492bbcedad1210235f26d59719fb6de3ef6464f1ff3b1   
+  0.6.3:
+    name: consul_0.6.3_web_ui.zip
+    sha256sum: 93bbb300cacfe8de90fb3bd5ede7d37ae6ce014898edc520b9c96a676b2bbb72
 
