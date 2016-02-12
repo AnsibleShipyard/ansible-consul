@@ -4,12 +4,12 @@ consul_package: "{{ consul_packages[consul_version][ansible_system][ansible_arch
 consul_package_name: "{{ consul_package.name }}"
 consul_package_checksum: "{{ consul_package.sha256sum }}"
 consul_package_repository: https://releases.hashicorp.com/consul
-consul_package_url: "{{ consul_package_repository }}/{{ consul_package_name }}"
+consul_package_url: "{{ consul_package_repository }}/{{ consul_version }}/{{ consul_package_name }}"
 
 consul_webui_package: "{{ consul_webui_packages[consul_version] }}"
 consul_webui_package_name: "{{ consul_webui_package.name }}"
 consul_webui_package_checksum: "{{ consul_webui_package.sha256sum }}"
-consul_webui_package_url: "{{ consul_package_repository }}/{{ consul_webui_package_name }}"
+consul_webui_package_url: "{{ consul_package_repository }}/{{ consul_version }}/{{ consul_webui_package_name }}"
 
 consul_group: consul
 consul_user: consul
