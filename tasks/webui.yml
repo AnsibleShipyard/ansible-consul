@@ -11,7 +11,9 @@
 
 - name: Unarchive Web UI
   unarchive: copy=no src=/opt/src/{{ consul_webui_package_name }} dest={{ consul_webui_path }} owner={{ consul_user }} group={{ consul_group }}
-  
+
+  # After 0.5.2, package doesn't contain 'dist' folder anymore
 - name: Move Web UI files
   shell: 'mv {{ consul_webui_path }}/dist/* {{ consul_webui_path }}/ && rm -fr {{ consul_webui_path }}/dist'
+  when: consul_version | version_compare('0.5.2', '<=')
 
